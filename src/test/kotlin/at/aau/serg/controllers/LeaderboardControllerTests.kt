@@ -22,9 +22,9 @@ class LeaderboardControllerTests {
 
     @Test
     fun test_getLeaderboard_correctScoreSorting() {
-        val first = GameResult(1, "first", 20, 20.0)
-        val second = GameResult(2, "second", 15, 10.0)
-        val third = GameResult(3, "third", 10, 15.0)
+        val first = GameResult(1, "first", 20, 10.0) //changed to correct order
+        val second = GameResult(2, "second", 15, 15.0)
+        val third = GameResult(3, "third", 10, 20.0)
 
         whenever(mockedService.getGameResults()).thenReturn(listOf(second, first, third))
 
